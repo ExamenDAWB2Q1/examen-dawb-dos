@@ -17,9 +17,15 @@ namespace examendawbdos.ViewModels
                 Application.Current.MainPage.Navigation.PushAsync(pagina);  
             });
 
+            NuevoCliente = new Command(() =>
+            {
+                var pagina = new ViewClientes();
+                Application.Current.MainPage.Navigation.PushAsync(pagina);
+            });
+
 
         }
-
+        public Command NuevoCliente { get; }
         public Command NuevoAuto { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
