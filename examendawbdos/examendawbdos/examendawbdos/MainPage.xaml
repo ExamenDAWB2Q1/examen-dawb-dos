@@ -10,7 +10,7 @@
 
             <StackLayout>
         <Frame BackgroundColor="#006d77" Padding="24" CornerRadius="0">
-            <Label Text="Hola Mundo 2!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Hola Mundo 3!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Button Text="Nuevo Auto"  Command="{Binding NuevoAuto}"  BackgroundColor="#346fad" TextColor="White" />
         <Button Text="Nuevo Cliente"  Command="{Binding NuevoCliente}"  BackgroundColor="#346fad" TextColor="White" />
