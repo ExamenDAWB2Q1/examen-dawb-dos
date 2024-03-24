@@ -38,6 +38,7 @@ namespace examendawbdos.ViewModels
             }
 
         }
+
             public ObservableCollection<ItemC> ListaClientes { get; set; } = new ObservableCollection<ItemC>();
 
     }

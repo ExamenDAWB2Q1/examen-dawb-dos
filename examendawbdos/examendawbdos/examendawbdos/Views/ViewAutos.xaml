@@ -8,8 +8,10 @@
         <local:ViewModelAutos></local:ViewModelAutos>
     </ContentPage.BindingContext>
 
-        <ContentPage.Content>
+    <ContentPage.Content>
         <StackLayout>
+
+            <Label> </Label>
 
             <CollectionView ItemsSource="{Binding ListaAutos}" SelectionMode="None">
 
@@ -32,7 +34,7 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
 
                             </Grid.ColumnDefinitions>
-
+                            
                             <Label Text="{Binding id_carro}" Grid.Column="1" ></Label>
                             <Label Text="{Binding marca}"  Grid.Column="2"  ></Label>
                             <Label Text="{Binding modelo}"  Grid.Column="3"  ></Label>

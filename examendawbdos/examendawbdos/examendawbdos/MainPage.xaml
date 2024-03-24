@@ -8,12 +8,15 @@
         <local:ViewModelMainPage></local:ViewModelMainPage>
     </ContentPage.BindingContext>
 
-            <StackLayout>
+    <StackLayout BackgroundColor="#efefd0">
         <Frame BackgroundColor="#006d77" Padding="24" CornerRadius="0">
             <Label Text="Hola Mundo 3!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Button Text="Nuevo Auto"  Command="{Binding NuevoAuto}"  BackgroundColor="#346fad" TextColor="White" />
-        <Button Text="Nuevo Cliente"  Command="{Binding NuevoCliente}"  BackgroundColor="#346fad" TextColor="White" />
+
+        <Button Text="Lista de Clientes"  Command="{Binding ListaClientes}"  BackgroundColor="#004e89" TextColor="White" />
+        <Button Text="Crear Cliente"  Command="{Binding CrearCliente}"  BackgroundColor="#04724d" TextColor="White" />
+        <Button Text="Lista de Autos"  Command="{Binding ListaAutos}"  BackgroundColor="#0f4c5c" TextColor="White" />
+        <Button Text="Crear Autos"  Command="{Binding CrearAutos}"  BackgroundColor="#04724d" TextColor="White" />
         <Button Text="Nueva Compra"  Command="{Binding NuevaCompra}"  BackgroundColor="#346fad" TextColor="White" />
 
     </StackLayout>

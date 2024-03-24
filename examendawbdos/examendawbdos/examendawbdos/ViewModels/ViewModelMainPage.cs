@@ -11,13 +11,13 @@ namespace examendawbdos.ViewModels
     {
         public ViewModelMainPage() {
 
-            NuevoAuto = new Command(() =>
+            ListaAutos = new Command(() =>
             {
                 var pagina = new ViewAutos();
                 Application.Current.MainPage.Navigation.PushAsync(pagina);  
             });
 
-            NuevoCliente = new Command(() =>
+            ListaClientes = new Command(() =>
             {
                 var pagina = new ViewClientes();
                 Application.Current.MainPage.Navigation.PushAsync(pagina);
@@ -29,10 +29,23 @@ namespace examendawbdos.ViewModels
                 Application.Current.MainPage.Navigation.PushAsync(pagina);
             });
 
+            CrearCliente = new Command(() => {
 
+                var pagina = new ViewCrearClientes();
+                Application.Current.MainPage.Navigation.PushAsync(pagina);
+            });
+
+            CrearAutos = new Command(() => {
+                var pagina = new ViewCrearAutos();
+                Application.Current.MainPage.Navigation.PushAsync(pagina);
+            });
         }
-        public Command NuevoCliente { get; }
-        public Command NuevoAuto { get; }
+
+        public Command CrearAutos { get; }
+        public Command ActualizarCliente { get; set; }
+        public Command CrearCliente { get; }
+        public Command ListaClientes { get; }
+        public Command ListaAutos { get; }
         public Command NuevaCompra { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
