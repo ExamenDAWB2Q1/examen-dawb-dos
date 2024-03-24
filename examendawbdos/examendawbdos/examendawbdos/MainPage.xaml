@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examendawbdos.MainPage"
+             xmlns:local="clr-namespace:examendawbdos.ViewModels">
+
+    <ContentPage.BindingContext>
+        <local:ViewModelMainPage></local:ViewModelMainPage>
+    </ContentPage.BindingContext>
+
+            <StackLayout>
+        <Frame BackgroundColor="#006d77" Padding="24" CornerRadius="0">
+            <Label Text="Hola Mundo!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button Text="Nuevo Auto"  Command="{Binding NuevoAuto}"  BackgroundColor="#346fad" TextColor="White" />
+
+    </StackLayout>
+
+</ContentPage>
