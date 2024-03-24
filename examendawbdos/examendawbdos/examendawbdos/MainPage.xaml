@@ -14,6 +14,7 @@
         </Frame>
         <Button Text="Nuevo Auto"  Command="{Binding NuevoAuto}"  BackgroundColor="#346fad" TextColor="White" />
         <Button Text="Nuevo Cliente"  Command="{Binding NuevoCliente}"  BackgroundColor="#346fad" TextColor="White" />
+        <Button Text="Nueva Compra"  Command="{Binding NuevaCompra}"  BackgroundColor="#346fad" TextColor="White" />
 
     </StackLayout>
 
