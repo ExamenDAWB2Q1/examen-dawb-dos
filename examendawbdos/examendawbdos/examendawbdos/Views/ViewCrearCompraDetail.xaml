@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examendawbdos.Views.ViewCrearCompraDetail"
+         xmlns:local="clr-namespace:examendawbdos.ViewModels"
+ Title="Compras">
+    <ContentPage.BindingContext>
+        <local:ViewModelRegCompras></local:ViewModelRegCompras>
+    </ContentPage.BindingContext>
+   
+  <StackLayout Padding="10">
+       
+
+        <Label Text="ID Cliente"/>
+        <Entry Text="{Binding Id_cliente}" ></Entry>
+      
+      
+        <Label Text="ID Carro"/>
+        <Entry Text="{Binding Id_carro}" ></Entry>
+      
+      
+        <Label Text="Monto Total"/>
+        <Entry  Text="{Binding Monto_total}" ></Entry>
+
+        <Button  Command="{Binding crearCompras}" Text="Crear" BackgroundColor="#04724d" TextColor="White" />
+
+        <Label Text="{Binding Result}" ></Label>
+    </StackLayout>
+</ContentPage>

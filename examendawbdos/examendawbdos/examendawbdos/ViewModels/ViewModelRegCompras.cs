@@ -7,23 +7,24 @@ using Xamarin.Forms;
 
 namespace examendawbdos.ViewModels
 {
-    public class ViewModelRegAutos : INotifyPropertyChanged
+    public class ViewModelRegCompras : INotifyPropertyChanged
     {
-        public ViewModelRegAutos()
+
+        public ViewModelRegCompras()
         {
 
-            crearAuto = new Command(async () => {
+            crearCompras = new Command(async () => {
 
-                string url = "https://apex.oracle.com/pls/apex/d_app_web/venta_autos/venta_autos_deportivos";
+                string url = "https://apex.oracle.com/pls/apex/d_app_web/COMPRAS/COMPRAS_CLIENTES";
 
                 ConsumoServicios servicios = new ConsumoServicios(url);
 
-                CrearAutoBody body = new CrearAutoBody()
+                CrearCompraBody body = new CrearCompraBody()
                 {
-
-                    marca = marca,
-                    modelo = modelo,
-                    precio = precio
+                    
+                    id_carro = id_carro,
+                    id_cliente = id_cliente,
+                    monto_total = monto_total
                 };
 
                 CrearDatosResponse response = await servicios.PostAsync<CrearDatosResponse>(body);
@@ -43,45 +44,45 @@ namespace examendawbdos.ViewModels
 
         }
 
-        string marca;
+        string id_carro;
 
-        public string Marca
+        public string Id_carro
         {
 
-            get => marca;
+            get => id_carro;
             set
             {
-                marca = value;
-                var args = new PropertyChangedEventArgs(nameof(Marca));
+                id_carro = value;
+                var args = new PropertyChangedEventArgs(nameof(Id_carro));
                 PropertyChanged?.Invoke(this, args);
             }
         }
 
 
-        string modelo;
+        string id_cliente;
 
-        public string Modelo
+        public string Id_cliente
         {
 
-            get => modelo;
+            get => id_cliente;
             set
             {
-                modelo = value;
-                var args = new PropertyChangedEventArgs(nameof(Modelo));
+                id_cliente = value;
+                var args = new PropertyChangedEventArgs(nameof(Id_cliente));
                 PropertyChanged?.Invoke(this, args);
             }
         }
 
-        int precio;
+        string monto_total;
 
-        public int Precio
+        public string Monto_total
         {
 
-            get => precio;
+            get => monto_total;
             set
             {
-                precio = value;
-                var args = new PropertyChangedEventArgs(nameof(Precio));
+                monto_total = value;
+                var args = new PropertyChangedEventArgs(nameof(Monto_total));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -101,11 +102,9 @@ namespace examendawbdos.ViewModels
             }
         }
 
-        public Command crearAuto { get; }
+        public Command crearCompras { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }
-
-

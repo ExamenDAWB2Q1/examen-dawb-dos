@@ -39,6 +39,11 @@ namespace examendawbdos.ViewModels
                 var pagina = new ViewCrearAutos();
                 Application.Current.MainPage.Navigation.PushAsync(pagina);
             });
+
+            CrearCompras = new Command(() => {
+                var pagina = new ViewCrearCompraDetail();
+                Application.Current.MainPage.Navigation.PushAsync(pagina);
+            });
         }
 
         public Command CrearAutos { get; }
@@ -47,6 +52,8 @@ namespace examendawbdos.ViewModels
         public Command ListaClientes { get; }
         public Command ListaAutos { get; }
         public Command NuevaCompra { get; }
+
+        public Command CrearCompras { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

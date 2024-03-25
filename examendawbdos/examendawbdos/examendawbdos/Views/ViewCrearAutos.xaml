@@ -21,7 +21,7 @@
             <Label Text="Precio"/>
             <Entry Text="{Binding Precio}" ></Entry>
 
-            <Button  Command="{Binding crearAutos}" Text="Crear" BackgroundColor="#04724d" TextColor="White" />
+            <Button  Command="{Binding crearAuto}" Text="Crear" BackgroundColor="#04724d" TextColor="White" />
 
             <Label Text="{Binding Result}" ></Label>
         </StackLayout>

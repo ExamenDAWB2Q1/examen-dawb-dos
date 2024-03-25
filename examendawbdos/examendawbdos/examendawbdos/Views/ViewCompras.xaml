@@ -22,21 +22,28 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"></RowDefinition>
                                 <RowDefinition Height="*"></RowDefinition>
+                                
+
 
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
+                                
+                                
+                                <ColumnDefinition  Width="*"></ColumnDefinition>
+                                
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                
 
                             </Grid.ColumnDefinitions>
 
-                            <Label Text="{Binding id_carro}" Grid.Column="1" ></Label>
-                            <Label Text="{Binding marca}"  Grid.Column="2"  ></Label>
-                            <Label Text="{Binding modelo}"  Grid.Column="3"  ></Label>
-                            <Label Text="{Binding precio}"  Grid.Column="4"  ></Label>
+                           
+                            <Label Text="{Binding id_compra}" Grid.Column="1" ></Label>
+                            <Label Text="{Binding id_cliente}"  Grid.Column="2"  ></Label>
+                            <Label Text="{Binding id_carro}"  Grid.Column="3"  ></Label>
+                            <Label Text="{Binding monto_total}"  Grid.Column="4"  ></Label>
 
                         </Grid>
 

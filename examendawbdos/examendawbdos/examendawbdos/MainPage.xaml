@@ -2,22 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="examendawbdos.MainPage"
-             xmlns:local="clr-namespace:examendawbdos.ViewModels">
+             xmlns:local="clr-namespace:examendawbdos.ViewModels"
+              Title="Venta Autos"
+             >
 
     <ContentPage.BindingContext>
         <local:ViewModelMainPage></local:ViewModelMainPage>
     </ContentPage.BindingContext>
 
     <StackLayout BackgroundColor="#efefd0">
-        <Frame BackgroundColor="#006d77" Padding="24" CornerRadius="0">
-            <Label Text="Hola Mundo 3!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="#db7e37" Padding="24" CornerRadius="0">
+            <Label Text="Tabla  Clientes" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
         <Button Text="Lista de Clientes"  Command="{Binding ListaClientes}"  BackgroundColor="#004e89" TextColor="White" />
         <Button Text="Crear Cliente"  Command="{Binding CrearCliente}"  BackgroundColor="#04724d" TextColor="White" />
+
+        <Frame BackgroundColor="#db7e37" Padding="24" CornerRadius="0">
+            <Label Text="Tabla  Autos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
         <Button Text="Lista de Autos"  Command="{Binding ListaAutos}"  BackgroundColor="#0f4c5c" TextColor="White" />
         <Button Text="Crear Autos"  Command="{Binding CrearAutos}"  BackgroundColor="#04724d" TextColor="White" />
-        <Button Text="Nueva Compra"  Command="{Binding NuevaCompra}"  BackgroundColor="#346fad" TextColor="White" />
+
+        <Frame BackgroundColor="#db7e37" Padding="24" CornerRadius="0">
+            <Label Text="Tabla  Pedidos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button Text="Lista de compras"  Command="{Binding NuevaCompra}"  BackgroundColor="#346fad" TextColor="White" />
+        <Button Text="Crear Nueva Compra"  Command="{Binding CrearCompras }"  BackgroundColor="#04724d" TextColor="White" />
 
     </StackLayout>
 
